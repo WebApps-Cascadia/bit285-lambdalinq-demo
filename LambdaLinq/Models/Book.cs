@@ -8,6 +8,9 @@ namespace LambdaLinq.Models
 {
     public class Book
     {
+        //Database requires a Primary Key field
+        public int BookID { get; set; }
+
         [Required]
         public string Title { get; set; }
 
