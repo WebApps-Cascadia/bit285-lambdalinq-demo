@@ -1,0 +1,28 @@
+﻿//  This method will be called after migrating to the latest version.
+
+            context.Books.AddOrUpdate(
+              b => b.BookID,
+                new Book()
+                {
+                    Title = "Pride and Prejudice",
+                    Publication = DateTime.Parse("3/7/1992"),
+                    Author = "Jane Austin",
+                    Price = 9.99M,
+                    Edition = 20
+                },
+                new Book {
+                    Title = "David Copperfield",
+                    Publication = DateTime.Parse("1/16/1850"),
+                    Author = "Charles Dickens",
+                    Price = 150,
+                    Edition = 1
+                },
+                new Book
+                {
+                    Title = "Don Quixote",
+                    Publication = DateTime.Parse("3/7/2012"),
+                    Author = "Miguel de Cervantes",
+                    Price = 18.95M,
+                    Edition = 12
+                }
+            );
