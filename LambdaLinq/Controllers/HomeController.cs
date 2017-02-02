@@ -16,8 +16,6 @@ namespace LambdaLinq.Controllers
 
         public ActionResult List()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
