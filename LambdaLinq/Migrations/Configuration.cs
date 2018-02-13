@@ -18,7 +18,6 @@ namespace LambdaLinq.Migrations
         {
             //  This method will be called after migrating to the latest version.
 
-            //  TODO: Add two additional books to the seed data and update the database
             //
             context.Books.AddOrUpdate(b=>b.BookID,
         new Book()
@@ -62,7 +61,23 @@ namespace LambdaLinq.Migrations
             Title = "The Farthest Shore",
             Author = "Ursula Le Guin",
             Price = 9.95M
-        });
+        },
+           //  TODO: Add two additional books to the seed data and update the database
+
+           new Book()
+           {
+               BookID = 7,
+               Title = "Americanah",
+               Author = "Chimamanda Ngozi Adichie",
+               Price = 10.99M
+           },
+              new Book()
+              {
+                  BookID = 8,
+                  Title = "The Feminine Mystique",
+                  Author = "Betty Friedan",
+                  Price = 9.99M
+              });
 
         }
     }

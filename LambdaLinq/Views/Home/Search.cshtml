@@ -1,6 +1,8 @@
 ﻿@model LambdaLinq.ViewModels.SearchViewModel
 
 @{
+    /**/
+
     ViewBag.Title = "Search";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -12,6 +14,27 @@
         <Label>
             Author To Find:
             @Html.EditorFor(m => m.Author)
+        </Label>
+    </div>
+    <div class="form-group">
+
+        <Label>
+            Title To Find:
+            @Html.EditorFor(m => m.Title)
+        </Label>
+    </div>
+    <div class="form-group">
+
+        <Label>
+            Low Price:
+            @Html.EditorFor(m => m.lowPrice)
+        </Label>
+    </div>
+    <div class="form-group">
+
+        <Label>
+            High Price:
+            @Html.EditorFor(m => m.highPrice)
         </Label>
     </div>
 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using LambdaLinq.Models;
+using LambdaLinq.ViewModels;
 
 namespace LambdaLinq.Controllers
 {
@@ -20,8 +21,8 @@ namespace LambdaLinq.Controllers
         public ActionResult Create(Book newBook)
         {
             //TODO: Add the new book to the database
-
-
+            db.Books.Add(newBook);
+            db.SaveChanges();
             return View();
         }
 
@@ -31,17 +32,37 @@ namespace LambdaLinq.Controllers
         }
 
         [HttpPost]
-        public ActionResult Search(Book searchBook)
+        public ActionResult Search(SearchViewModel searchBook)
         {
-            //TODO: add logic to return all books if the search is empty
+           
+            var foundAuthor = db.Books.Where(b => b.Author == searchBook.Author);
+            if(foundAuthor != null)
+            {
+                return View("SearchResult", foundAuthor);
+            }
+            
 
-            var foundBooks = db.Books.Where(b => b.Author == searchBook.Author);
+            //TODO: add logic to search by Title (Note: you will need to adjust 
+            //the View and ViewModel)
+            var foundTitle = db.Books.Where(b => b.Title == searchBook.Title);
+            if (foundTitle != null)
+            {
+                //Q: is this the correct syntax?
+                return View("SearchResult", foundTitle);
+            }
 
-            //TODO: add logic to search by Title (Note: you will need to adjust the View and ViewModel)
+            //TODO: add logic to return a search on price between a low and high number 
+            //(Note: you will need to adjust the View and ViewModel)
+            //if the databases's Price is greater than or equal to the searched low price
+            var foundPrice = db.Books.Where(b => b.Price >= searchBook.lowPrice && b.Price <= searchBook.highPrice);
+            if (foundPrice != null)
+            {
+                //Q: is this the correct syntax?
+                return View("SearchResult", foundPrice);
+            }
+        
+            return View(db.Books);
 
-            //TODO: add logic to return a search on price between a low and high number (Note: you will need to adjust the View and ViewModel)
-
-            return View("SearchResult", foundBooks);
         }
     }
 }
