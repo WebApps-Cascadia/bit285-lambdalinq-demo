@@ -18,8 +18,7 @@ namespace LambdaLinq.Migrations
         {
             //  This method will be called after migrating to the latest version.
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
+            //  TODO: Add two additional books to the seed data and update the database
             //
             context.Books.AddOrUpdate(b=>b.BookID,
         new Book()
