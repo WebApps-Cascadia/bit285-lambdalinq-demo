@@ -40,21 +40,21 @@ namespace LambdaLinq.Controllers
             
             
             var foundBooks = db.Books.Where(b => b.Author == searchBook.Author);
-            if (foundBooks!=null)
+            if (searchBook.Author!=null)
             {
 
                 return View("SearchResult", foundBooks);
             }
                 //TODO: add logic to search by Title (Note: you will need to adjust the View and ViewModel)
                 var booksByTitle = db.Books.Where(b => b.Title == searchBook.Title);
-             if (booksByTitle != null)
+             if (searchBook.Title != null)
             {
                 return View("SearchResult", booksByTitle);
             };
             
             //TODO: add logic to return a search on price between a low and high number (Note: you will need to adjust the View and ViewModel)
             var booksByPrice = db.Books.Where(b => b.Price >= searchBook.LowPrice && b.Price <= searchBook.HighPrice);
-             if (booksByPrice != null)
+             if (searchBook.LowPrice!=0 || searchBook.HighPrice!=0)
             {
                 return View("SearchResult", booksByPrice);
             }
