@@ -141,6 +141,14 @@
     <Compile Include="Migrations\201802131937355_Initial.Designer.cs">
       <DependentUpon>201802131937355_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802132243248_test.cs" />
+    <Compile Include="Migrations\201802132243248_test.Designer.cs">
+      <DependentUpon>201802132243248_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802132249081_test2.cs" />
+    <Compile Include="Migrations\201802132249081_test2.Designer.cs">
+      <DependentUpon>201802132249081_test2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BookstoreDbContext.cs" />
@@ -201,6 +209,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802131937355_Initial.resx">
       <DependentUpon>201802131937355_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802132243248_test.resx">
+      <DependentUpon>201802132243248_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802132249081_test2.resx">
+      <DependentUpon>201802132249081_test2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

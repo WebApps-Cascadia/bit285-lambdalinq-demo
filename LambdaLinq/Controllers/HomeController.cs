@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using LambdaLinq.Models;
+using LambdaLinq.ViewModels;
 
 namespace LambdaLinq.Controllers
 {
@@ -19,9 +20,9 @@ namespace LambdaLinq.Controllers
         [HttpPost]
         public ActionResult Create(Book newBook)
         {
-            //TODO: Add the new book to the database
-
-
+            //Add the new book to the database
+            db.Books.Add(newBook);
+            db.SaveChanges();
             return View();
         }
 
@@ -31,12 +32,15 @@ namespace LambdaLinq.Controllers
         }
 
         [HttpPost]
-        public ActionResult Search(Book searchBook)
+        public ActionResult Search(SearchViewModel searchBook)
         {
-            //TODO: add logic to return all books if the search is empty
+            //add logic to return all books if the search is empty
 
-            var foundBooks = db.Books.Where(b => b.Author == searchBook.Author);
-
+            var foundBooks = db.Books.Where( b => b.Author == searchBook.Author && b.Title == searchBook.Title && b.Price > searchBook.LowPrice && b.Price < searchBook.highPrice);
+            if (foundBooks == null)
+            {
+                foundBooks = db.Books;
+            }
             //TODO: add logic to search by Title (Note: you will need to adjust the View and ViewModel)
 
             //TODO: add logic to return a search on price between a low and high number (Note: you will need to adjust the View and ViewModel)
