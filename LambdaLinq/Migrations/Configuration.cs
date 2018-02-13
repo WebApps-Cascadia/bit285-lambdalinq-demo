@@ -28,6 +28,7 @@ namespace LambdaLinq.Migrations
             Author = "Jane Austin",
             Price = 9.99M
         },
+
         new Book()
         {
             BookID = 2,
@@ -55,6 +56,27 @@ namespace LambdaLinq.Migrations
             Title = "The Tombs of Atuan",
             Author = "Ursula Le Guin",
             Price = 7.95M
+        },
+        new Book()
+        {
+            BookID = 7,
+            Title = "Best Book Ever Part 1",
+            Author = "Gus Degrandis",
+            Price = 59.99M
+        },
+        new Book()
+        {
+            BookID = 8,
+            Title = "Best Book Ever Part 2",
+            Author = "Gus Degrandis",
+            Price = 59.99M
+        },
+        new Book()
+        {
+            BookID = 9,
+            Title = "Best Book Ever Part 3",
+            Author = "Gus Degrandis",
+            Price = 59.99M
         },
         new Book()
         {
