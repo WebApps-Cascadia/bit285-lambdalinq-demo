@@ -14,9 +14,29 @@
             @Html.EditorFor(m => m.Author)
         </Label>
     </div>
+    <div class="form-group">
+        <Label>
+            Title To Find:
+            @Html.EditorFor(m => m.Title)
+        </Label>
+    </div>
+    {
+    <div class="form-group">
+        <Label>
+            Low Price to Find:
+            @Html.EditorFor(m => m.LowPrice)
+        </Label>
+    </div>
+    <div class="form-group">
+        <Label>
+            High Price To Find:
+            @Html.EditorFor(m => m.HighPrice)
+        </Label>
+    </div>
 
     <div class="col-md-offset-2 col-md-10">
         <input type="submit" value="Search" class="btn btn-default" />
     </div>
+    }
 }
 

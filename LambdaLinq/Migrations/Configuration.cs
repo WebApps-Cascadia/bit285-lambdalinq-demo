@@ -62,6 +62,21 @@ namespace LambdaLinq.Migrations
             Title = "The Farthest Shore",
             Author = "Ursula Le Guin",
             Price = 9.95M
+        },
+        //brenda's new books 7 and 8
+            new Book()
+            {
+                BookID = 7,
+                Title = "Harry Potter",
+                Author = "Jk Rawling",
+                Price = 11.95M
+            },
+        new Book()
+        {
+            BookID = 8,
+            Title = "Lost",
+            Author = "S.A. Bodeen",
+            Price = 12.95M
         });
 
         }
