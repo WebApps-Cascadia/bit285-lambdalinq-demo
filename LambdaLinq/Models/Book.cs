@@ -8,24 +8,17 @@ namespace LambdaLinq.Models
 {
     public class Book
     {
-        //Database requires a Primary Key field
-        public int BookID { get; set; }
-
+        [Key]
+        public int BookID { get; set; }         //Database requires a Primary Key field
         [Required]
         public string Title { get; set; }
-
         [Required]
         public string Author { get; set; }
-
-        [Range(1,10,ErrorMessage ="between 1 and 10 only")]
-        public int Edition { get; set; }
-
+        public string Edition { get; set; }
         [Required]
         [DataType(DataType.Currency)]
         public decimal Price { get; set; }
-
-        [Display(Name = "Publication Date")]
-        [DataType(DataType.Date)]
-        public DateTime Publication { get; set; }
+        [Display(Name = "Publication Year")]
+        public string Publication { get; set; }
     }
 }

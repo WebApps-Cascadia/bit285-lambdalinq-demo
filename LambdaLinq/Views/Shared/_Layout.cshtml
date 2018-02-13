@@ -3,11 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Indy Books</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    <header>
+        <h1>Indy Books</h1>
+        <h2>Your Place for Reading</h2>
+    </header>
+    <nav>@Html.ActionLink("Search", "Search") 
+    @Html.ActionLink("Add New Book", "Create")
+</nav>
     <div class="container body-content">
         @RenderBody()
     </div>
