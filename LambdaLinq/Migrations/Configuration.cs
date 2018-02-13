@@ -1,4 +1,4 @@
-namespace LambdaLinq.Migrations
+    namespace LambdaLinq.Migrations
 {
     using System;
     using System.Data.Entity;
@@ -20,7 +20,7 @@ namespace LambdaLinq.Migrations
 
             //  TODO: Add two additional books to the seed data and update the database
             //
-            context.Books.AddOrUpdate(b=>b.BookID,
+            context.Books.AddOrUpdate(b => b.BookID,
         new Book()
         {
             BookID = 1,
@@ -62,7 +62,22 @@ namespace LambdaLinq.Migrations
             Title = "The Farthest Shore",
             Author = "Ursula Le Guin",
             Price = 9.95M
-        });
+        },
+        new Book()
+        {
+            BookID = 7,
+            Title="Seed Title",
+            Author="Hi There",
+            Price=3.33M
+        },
+        new Book()
+        {
+            BookID=8,
+            Title="Second Seed Title",
+            Author="Hello",
+            Price=5.55M
+        }
+        );
 
         }
     }

@@ -141,6 +141,10 @@
     <Compile Include="Migrations\201802131937355_Initial.Designer.cs">
       <DependentUpon>201802131937355_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802132252111_Buch.cs" />
+    <Compile Include="Migrations\201802132252111_Buch.Designer.cs">
+      <DependentUpon>201802132252111_Buch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BookstoreDbContext.cs" />
@@ -201,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802131937355_Initial.resx">
       <DependentUpon>201802131937355_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802132252111_Buch.resx">
+      <DependentUpon>201802132252111_Buch.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
