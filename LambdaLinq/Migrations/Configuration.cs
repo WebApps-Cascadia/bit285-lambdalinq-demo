@@ -62,7 +62,21 @@ namespace LambdaLinq.Migrations
             Title = "The Farthest Shore",
             Author = "Ursula Le Guin",
             Price = 9.95M
-        });
+        },
+         new Book()
+         {
+             BookID = 7,
+             Title = "The Fart re",
+             Author = "Ursula Le Guin",
+             Price = 9.95M
+         },
+          new Book()
+          {
+              BookID = 8,
+              Title = "The Farthest ore",
+              Author = "Ursula Le Guin",
+              Price = 9.95M
+          });
 
         }
     }
