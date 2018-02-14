@@ -59,6 +59,27 @@ namespace LambdaLinq.Migrations
         new Book()
         {
             BookID = 6,
+            Title = "Man and the Sea",
+            Author = "Ernest Hemingway",
+            Price = 10.20M
+        },
+        new Book()
+        {
+            BookID = 7,
+            Title = "The Hidden History",
+            Author = "Donna Tartt",
+            Price = 11.00M
+        },
+        new Book()
+        {
+            BookID = 8,
+            Title = "Crime and Punishment",
+            Author = "Fyodor Dostoyevsky",
+            Price = 13.55M
+        },
+        new Book()
+        {
+            BookID = 9,
             Title = "The Farthest Shore",
             Author = "Ursula Le Guin",
             Price = 9.95M
