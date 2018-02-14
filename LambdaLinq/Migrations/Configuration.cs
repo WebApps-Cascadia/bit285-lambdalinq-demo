@@ -62,6 +62,20 @@ namespace LambdaLinq.Migrations
             Title = "The Farthest Shore",
             Author = "Ursula Le Guin",
             Price = 9.95M
+        },
+        new Book()
+        {
+            BookID = 7,
+            Title = "Call of The Wild",
+            Author = "Jack London",
+            Price = 8.93M
+        },
+        new Book()
+        {  
+            BookID = 8,
+            Title = "Hatchet",
+            Author = "Gary Paulsen",
+            Price = 4.92M
         });
 
         }
