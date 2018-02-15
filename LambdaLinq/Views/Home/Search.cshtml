@@ -8,12 +8,21 @@
 <h3>Find Books</h3>
 @using (Html.BeginForm())
 {
-    <div class="form-group">
-        <Label>
-            Author To Find:
-            @Html.EditorFor(m => m.Author)
-        </Label>
-    </div>
+<div class="form-group">
+    <Label>
+        Search By Author:
+        @Html.EditorFor(m => m.Author)
+    </Label>
+    <Label>
+        Search By Title:
+        @Html.EditorFor(m => m.Title)
+    </Label>
+    <Label>
+        Search By Price Range:
+        Between @Html.EditorFor(m => m.PriceMin)
+        And     @Html.EditorFor(m => m.PriceMax)
+    </Label>
+</div>
 
     <div class="col-md-offset-2 col-md-10">
         <input type="submit" value="Search" class="btn btn-default" />
