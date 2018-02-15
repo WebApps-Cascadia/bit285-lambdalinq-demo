@@ -62,6 +62,21 @@ namespace LambdaLinq.Migrations
             Title = "The Farthest Shore",
             Author = "Ursula Le Guin",
             Price = 9.95M
+        },
+        new Book()
+        {
+            BookID = 7,
+            Title = "The Tombs of Bothell",
+            Author = "Ben Bell",
+            Price = 29.95M
+        },
+        new Book()
+        {
+            BookID = 8,
+            Title = "The Tombs Shoreline",
+            Author = "Benjamin Bell",
+            Price = 29.95M
+            
         });
 
         }
