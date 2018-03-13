@@ -62,6 +62,27 @@ namespace LambdaLinq.Migrations
             Title = "The Farthest Shore",
             Author = "Ursula Le Guin",
             Price = 9.95M
+        },
+        new Book()
+        {
+            BookID = 7,
+            Title = "Gulivers Travels",
+            Author = "Jonathan Swift",
+            Price = 10.55M
+        },
+        new Book()
+        {
+            BookID = 8,
+            Title = "The Foundation Trilogy",
+            Author = "Isaac Asimov",
+            Price = 19.95M
+        },
+        new Book()
+        {
+            BookID = 9,
+            Title = "Le Morte d'Arthur",
+            Author = "Sir Thomas Mallory",
+            Price = 15.00M
         });
 
         }
